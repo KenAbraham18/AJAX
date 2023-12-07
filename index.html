@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p id="word"></p>
-    <button id="btn">Get One Only</button>
     <script>
-        let myRequest = new XMLHttpRequest();
-        myRequest.onreadystatechange = function(){
-            if(this.readyState == 4 && this == 200){
-                document.getElementById('word').innerHTML = myRequest.responseText
-            }
-        };
-        myRequest.open("GET","words.txt", true);
-        myRequest.send();
-
-        document.getElementById("btn").addEventListener("click",getOneWord)
-
-        function getOneWord(){
-            //console.log("IT WORKS")
-            myRequest.responseText.split(',')
-            console.log(myArray);
+        var person = {
+            name:"Brad"
+            age: 35,
+            address:{
+                street:"5 main st", 
+                city: "Boston"
+            },
+            children:["Brianna", "Nicholas"]
         }
-        </script>   
+
+        //person= JSON.stringify(person);
+
+var people = [
+    {
+        name:"Brad",
+        age: 35
+    },
+    {
+        name:"John"
+        age: 40
+    }
+    {
+        name:"Sara",
+        age: 25
+    }
+];
+
+
+
+
+        console.log(person.children[1]);
+
+    </script>
+    
 </body>
 </html>
